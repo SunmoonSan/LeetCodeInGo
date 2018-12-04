@@ -1,4 +1,4 @@
-# LeetCodeInGo
+# LeetCodeInGolang
 
 
 ###### 090-100
