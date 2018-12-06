@@ -26,8 +26,21 @@ func twoSum(nums []int, target int) []int {
 	return []int{-1, -1}
 }
 
+func twoSum2(nums []int, target int) []int {
+	kvs := map[int]int{} // 初始化一个map
+	for i, v := range nums {
+		_, ok := kvs[target-v]
+		if ok {
+			return []int{kvs[target-v], i}
+		} else {
+			kvs[v] = i
+		}
+	}
+	return []int{-1, -1}
+}
+
 func main() {
 	nums := []int{2, 7, 11, 15}
 	target := 9
-	fmt.Println(twoSum(nums, target))
+	fmt.Println(twoSum2(nums, target))
 }
